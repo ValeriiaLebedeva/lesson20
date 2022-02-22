@@ -31,7 +31,7 @@ allure serve build/allure-results
 #### To run test in browserstack
 ### https://jenkins.autotests.cloud/job/ValeriiaLebedeva_lesson20/
 
-####How to build project: 
+#### How to build project: 
 #### 1. Click on the 'Build now'
 
 # Allure report examples
