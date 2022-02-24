@@ -1,8 +1,7 @@
-package tests.browserstack;
+package tests;
 
 import io.appium.java_client.MobileBy;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
@@ -15,7 +14,6 @@ import static io.qameta.allure.Allure.step;
 public class AndroidTests extends TestBase {
 
     @Test
-    @Tag("browserstack")
     @DisplayName("Search Wikipedia app")
     void searchTest() {
 
@@ -30,7 +28,6 @@ public class AndroidTests extends TestBase {
     }
 
     @Test
-    @Tag("browserstack")
     @DisplayName("Open Settings screen")
     void openSettingsTest() {
 
@@ -43,5 +40,4 @@ public class AndroidTests extends TestBase {
         step("Verify Settings screen is opened", () -> {
             $(byClassName("android.widget.TextView")).shouldHave(text("Settings"));});
     }
-
 }

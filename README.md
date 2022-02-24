@@ -11,13 +11,13 @@
 ### Run tests on Browserstack:
 
 ```bash
-gradle clean browserstack
+gradle clean test -DdeviceHost=browsertack
 ```
 
 ### Run tests on Android studio emulator using Appium server:
 
 ```bash
-gradle clean local
+gradle clean test -DdeviceHost=local
 ```
 
 
