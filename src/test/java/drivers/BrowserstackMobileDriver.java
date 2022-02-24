@@ -13,11 +13,9 @@ import java.net.URL;
 public class BrowserstackMobileDriver implements WebDriverProvider {
 
     public static MobileConfig mobileConfig = ConfigFactory.create(MobileConfig.class);
-
     String user = mobileConfig.user();
     String key = mobileConfig.key();
     String appUrl = mobileConfig.appUrl();
-
 
     public static URL getBrowserstackUrl() {
         try {
@@ -49,5 +47,4 @@ public class BrowserstackMobileDriver implements WebDriverProvider {
         // and desired capabilities defined above
         return new AndroidDriver(getBrowserstackUrl(), desiredCapabilities);
     }
-
 }

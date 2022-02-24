@@ -20,16 +20,13 @@ public class AndroidTests extends TestBase {
     void searchTest() {
 
         step("Click on the Search field", () -> {
-            $(MobileBy.AccessibilityId("Search Wikipedia")).click();
-        });
+            $(MobileBy.AccessibilityId("Search Wikipedia")).click();});
 
         step("Type 'Browserstack' in the Search field", () -> {
-        $(MobileBy.id("org.wikipedia.alpha:id/search_src_text")).sendKeys("BrowserStack");
-        });
+        $(MobileBy.id("org.wikipedia.alpha:id/search_src_text")).sendKeys("BrowserStack");});
 
         step("Verify search results are not empty", () -> {
-        $$(byClassName("android.widget.TextView")).shouldHave(sizeGreaterThan(0));
-        });
+        $$(byClassName("android.widget.TextView")).shouldHave(sizeGreaterThan(0));});
     }
 
     @Test
@@ -38,16 +35,13 @@ public class AndroidTests extends TestBase {
     void openSettingsTest() {
 
         step("Click on the menu button", () -> {
-            $(MobileBy.id("org.wikipedia.alpha:id/menu_overflow_button")).click();
-        });
+            $(MobileBy.id("org.wikipedia.alpha:id/menu_overflow_button")).click();});
 
         step("Click on the Settings in Dropdownlist", () -> {
-            $(MobileBy.id("org.wikipedia.alpha:id/explore_overflow_settings")).click();
-        });
+            $(MobileBy.id("org.wikipedia.alpha:id/explore_overflow_settings")).click();});
 
         step("Verify Settings screen is opened", () -> {
-            $(byClassName("android.widget.TextView")).shouldHave(text("Settings"));
-        });
+            $(byClassName("android.widget.TextView")).shouldHave(text("Settings"));});
     }
 
 }

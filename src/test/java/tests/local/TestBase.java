@@ -2,7 +2,6 @@ package tests.local;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
-import drivers.BrowserstackMobileDriver;
 import drivers.LocalMobileDriver;
 import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
@@ -17,7 +16,6 @@ public class TestBase {
     @BeforeAll
     public static void setup() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-
         Configuration.browser = LocalMobileDriver.class.getName();
         Configuration.startMaximized = false;
         Configuration.browserSize = null;

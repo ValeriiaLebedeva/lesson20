@@ -22,10 +22,9 @@ public class LocalMobileDriver implements WebDriverProvider {
 
     @Override
     public WebDriver createDriver(DesiredCapabilities desiredCapabilities) {
-
         desiredCapabilities.setCapability("platformName", "android");
         desiredCapabilities.setCapability("deviceName", "Pixel_4a_API_30");
-//        desiredCapabilities.setCapability("deviceName", "RFCR90ZMNQP");
+//        desiredCapabilities.setCapability("deviceName", "");
         desiredCapabilities.setCapability("version", "11.0");
         desiredCapabilities.setCapability("locale", "en");
         desiredCapabilities.setCapability("language", "en");
@@ -36,7 +35,4 @@ public class LocalMobileDriver implements WebDriverProvider {
 
         return new AndroidDriver(getBrowserstackUrl(), desiredCapabilities);
     }
-
-
-
 }
