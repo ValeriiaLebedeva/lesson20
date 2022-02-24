@@ -23,10 +23,10 @@ public class AndroidTests extends TestBase {
             $(MobileBy.AccessibilityId("Search Wikipedia")).click();});
 
         step("Type 'Browserstack' in the Search field", () -> {
-        $(MobileBy.id("org.wikipedia.alpha:id/search_src_text")).sendKeys("BrowserStack");});
+            $(MobileBy.id("org.wikipedia.alpha:id/search_src_text")).sendKeys("BrowserStack");});
 
         step("Verify search results are not empty", () -> {
-        $$(byClassName("android.widget.TextView")).shouldHave(sizeGreaterThan(0));});
+            $$(byClassName("android.widget.TextView")).shouldHave(sizeGreaterThan(0));});
     }
 
     @Test
