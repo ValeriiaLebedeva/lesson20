@@ -11,7 +11,7 @@
 ### Run tests on Browserstack:
 
 ```bash
-gradle clean test -DdeviceHost=browsertack
+gradle clean test -DdeviceHost=browserstack
 ```
 
 ### Run tests on Android studio emulator using Appium server:
